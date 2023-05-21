@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.maincontainer{
+    width: 100%;
+    height: 100vh;
+    background: #00304121;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* loginform */
+.loginform{
+    width: 700px;
+    height: 400px;
+    background: #fff;
+    border: 1px ;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px #00304121;
+    border: 1px solid #00304146;
+    padding: 20px 30px;
+    position: relative;
+  
+}
+
+/* log-header */
+.log-header{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 13px;
+    color: #003041cb;
+}
+
+/* login-from-details */
+.login-from-details{
+    width: 100%;
+    height: 300px;
+    background: #f7f7f7;
+}
+
+
+/* wiper */
+swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* .slide */
+  .slide{
+    width: 100%;
+    height: 100%;
+    /* background: pink; */
+    position: relative;
+  }
+
+
+
+  /* sign-guest */
+  .sign-guest{
+    width: 450px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* background: grey; */
+    margin: auto;
+    /* margin-top: 20px; */
+    
+  }
+  .sign-guest label{
+    padding: 15px 0;
+    font-weight: 500;
+    color: #003041;
+  }
+.sign-guest input{
+    width: 100%;
+    height: 50px;
+    margin: auto;
+    border: 1px solid #003041cb;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    font-size: 15px;
+    outline-color: #003041;
+}
+
+/* action-btn */
+.action-btn{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.action-btn button{
+    width: 120px;
+    height: 50px;
+    background: #003041;
+    color: #fff;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+}
+.action-btn button:hover{
+    background: #003041cb;
+    cursor: pointer;
+}
+
+.log-option{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.log-option span{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin: 0 5px;
+}
+.log-option span img{
+    width: 40px;
+}
+
+.log-option span:hover{
+    background: #f7f7f7;
+    cursor: pointer;
+    color: #003041;
+}
+
+.label{
+    width: 100%;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.label small{
+    width: 100%;
+    /* background: pink; */
+    margin: 0 10px;
+}
+.br{
+    width: 100%;
+    height: 1px;
+    background: #003041;
+}
+
+/* .err-alert */
+.err-alert{
+    width: 100%;
+    margin-top: -15px;
+    text-align: left;
+    color: orangered; 
+    font-size: 15px;
+    visibility: hidden;
+}
+.show-err{
+    visibility: visible;
+
+}
+
+.taskido-description{
+    text-align: center;
+    justify-content: center;
+    padding: 40px 0;
+    color: #003041;
+    font-weight: 400;
+}
+.taskido-description p{
+    padding: 10px 50px;
+    font-size: 15px;
+    /* padding-right: 100px; */
+
+}
+
+.taskido-description label{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.taskido-description img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}

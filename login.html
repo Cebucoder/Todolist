@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- main login-container -->
+    <div class="maincontainer">
+        <form>
+            <div class="loginform">
+                <div class="log-header">
+                    <h1>Taskido</h1>
+                </div> 
+
+                <div class="login-from-details">
+                    <swiper-container class="mySwiper" pagination="true" pagination-dynamic-bullets="true">
+                        <swiper-slide>
+                            <div class="slide taskido-description">
+
+                                <img src="./images/back.png" alt="">
+
+
+                                <label for="">Your All-in-One Task Manager and Calendar Companion</label>
+
+                                <p>Taskkido is a powerful and intuitive application designed to streamline your daily productivity and organization. With Taskkido, you can effortlessly manage your to-do lists, stay on top of your schedule with a handy calendar, receive important notifications, and set helpful alarms. It is the all-in-one solution to keep you productive and organized throughout your day.
+                                </p>
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div class="slide taskido-description">
+
+                                <img src="./images/back3.png" alt="">
+
+                                <p>Taskkido is the ultimate productivity tool. It lets you effortlessly manage to-do lists, stay organized with a calendar, receive notifications, and set alarms. Simplify your tasks, streamline your schedule, and stay on top of everything with Taskkido.
+                                </p>
+                                
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div class="slide">
+                                <form action="">
+                                    <div class="sign-guest">
+                                        <label for="">Sign as a Guest</label>
+                                        <input type="text" id="user-name" placeholder="Hi what is your name?" required>
+                                        <div class="err-alert" id="err-alert">
+                                            <small>You must entered your name.</small>
+                                        </div>
+                                        <div class="action-btn">
+                                            <button type="button" onclick="Signin()">Sign in Guest</button>
+                                        </div>
+
+                                        <span class="label">
+                                            <div class="br"></div>
+                                            <small>Continue with</small>
+                                            <div class="br"></div>
+                                        </span>
+
+                                        <div class="log-option">
+                                            <span><ion-icon name="logo-google"></ion-icon></span>
+                                            <span><ion-icon name="logo-facebook"></ion-icon></span>
+                                        </div>
+    
+                                    </div>
+                                </form>
+                            </div>
+                        </swiper-slide>
+               
+                    </swiper-container>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+
+<script src="./js/app.js"></script>
+
+</html>

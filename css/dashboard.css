@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+/* .dashboard-content */
+.dashboard-content{
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    /* background: pink; */
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard-card{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+/* cards */
+.cards{
+    width: 270px;
+    height: 130px;
+    background: #fff;
+    /* background: #003041ea; */
+    border-radius: 5px;
+    position: relative;
+    padding: 10px;
+    overflow: hidden;
+    margin-right: 15px;
+}
+.cards-header{
+    font-size: 25px;
+    color: #00304146;
+    /* color: #ffffffc5; */
+}
+
+.todo-count{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: red; */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.todo-count h1{
+    font-size: 55px;
+    color: #003041;
+    /* color: #fff; */
+}
+
+.cards span{
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    color: #00304146;
+    /* color: #ffffffc5; */
+    font-weight: 500;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main-style.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <title>Taskido | Dashboard</title>
+</head>
+<body>
+
+    <!-- maincontaier -->
+    <div class="main-container">
+        <!-- sidebar naviagtion -->
+        <div class="side-navigation">
+            <div class="sidebar-icon active" >
+                <ion-icon name="grid-outline" title="Dashboard"></ion-icon>
+            </div>
+
+            <div class="sidebar-icon " onclick="Addtask()">
+                <ion-icon name="add-outline" title="Add task"></ion-icon>
+            </div>
+
+            <div class="sidebar-icon ">
+                <ion-icon name="today-outline" title="Calendar"></ion-icon>
+            </div>
+
+            <div class="sidebar-icon ">
+                <ion-icon name="notifications-outline" title="Notification"></ion-icon>
+            </div>
+    
+            <div class="sidebar-icon ">
+                <ion-icon name="alarm-outline" title="Clock"></ion-icon>
+            </div>
+
+            <div class="sidebar-icon log" onclick="LogOutForm()">
+                <ion-icon name="log-out-outline" title="Sign Out"></ion-icon>
+            </div>
+        </div>
+
+
+        <!-- left content -->
+        <div class="dashboard">
+            <!-- header greeting -->
+            <div class="header">
+                <div class="greetings">
+                    <span class="greet-cont">
+                        <h1 id="day">Good Afternoon</h1>
+                        <h1 class="user-name" id="user">?</h1>
+                    </span>
+                    <span>
+
+                    </span>
+                </div>
+
+                <div class="user-icon">
+                    <img src="" alt="">
+                    <h2 id="user-f" style="color:#fff;"></h2>
+                </div>
+
+            </div>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <div class="dashboard-card">
+
+                    <div class="cards">
+                        <div class="cards-header">
+                            <ion-icon name="create-outline"></ion-icon>
+                        </div>
+                        <div class="todo-count">
+                            <h1 id="task-count">0</h1>
+                        </div>
+                        <span>
+                            <small>Your Todo</small>
+                        </span>
+                    </div>
+
+                    <div class="cards">
+                        <div class="cards-header">
+                            <ion-icon name="checkmark-done-outline"></ion-icon>
+                        </div>
+                        <div class="todo-count">
+                            <h1 id="task-complete">0</h1>
+                        </div>
+                        <span>
+                            <small>Task Completed</small>
+                        </span>
+                    </div>
+
+                    <div class="cards">
+                        <div class="cards-header">
+                            <ion-icon name="trash-outline"></ion-icon>
+                        </div>
+                        <div class="todo-count">
+                            <h1>0</h1>
+                        </div>
+                        <span>
+                            <small>Trash</small>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- popup before user redirect to login page if not login -->
+        <div class="warning-page" id="warning-page">
+            <div class="warning-card" id="warning-card">
+                <h3>Opps...</h3>
+                <h1>You must login first</h1>
+                <small>Redirecting to login...</small>
+                <span class="loading-anim">
+                    <img src="./images/loading.png" alt="">
+                </span>
+            </div>
+        </div>
+
+
+    </div>
+    
+</body>
+
+<script src="./js/app.js"></script>
+
+
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+
+</html>
