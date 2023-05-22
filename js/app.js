@@ -247,7 +247,7 @@ function radiocheck(event, taskNumber) {
     let completedTasksCount = completedTasks.length;
     localStorage.setItem("completedTasksCount", completedTasksCount);
 
-    // / Play audio
+    // play audio when user click task completed
 	const audio = new Audio("ting1.mp3");
 	audio.play();
 
