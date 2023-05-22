@@ -157,47 +157,47 @@ function addTodo(){
 // Display the save data from Local Storage
 let taskContainer = document.getElementById("task-container");
 
-function ShowTodoList(){
+function ShowTodoList() {
     taskContainer.innerHTML = "";
     let taskNumber = 0;
-    // let taskDeleted = 0;
-    let taskCompleted = 0;
-    todoList.forEach(function(TodoList){
-        taskNumber++;
-        // taskDeleted++;
-        taskCompleted++;
-
-        taskContainer.innerHTML +=
-
-        `
-        <li >
-            <div class="radiocheck" onclick="radiocheck(event),checkcom(event)">
-                <ion-icon name="radio-button-off-outline" id="uncheck"></ion-icon>
-                <ion-icon name="radio-button-on-outline" id="check"></ion-icon>
-            </div>
-
-            <span class="task-text" id="task-text">
-            <!--<label><a href="${"https://"+TodoList.Url}" target="_blank">${TodoList.Title}</a></label>-->
-            <label><a  href="${TodoList.Url}" target="_blank">${TodoList.Title}</a></label>
-            </span>
-
-            <span class="task-time">
-            <!--<label><a href="${"https://"+TodoList.Url}" target="_blank">${TodoList.Title}</a></label>-->
+    let completedTasksCount = 0;
+  
+    todoList.forEach(function (TodoList) {
+      taskNumber++;
+  
+      let isCompleted = localStorage.getItem(`taskCompleted_${taskNumber}`) === "true";
+      let isChecked = localStorage.getItem(`radioChecked_${taskNumber}`) === "true";
+  
+      if (isCompleted) {
+        completedTasksCount++;
+      }
+  
+      taskContainer.innerHTML += `
+        <li>
+          <div class="radiocheck" onclick="radiocheck(event, ${taskNumber}), checkcom(event)">
+            <ion-icon name="radio-button-off-outline" id="uncheck" class="${isChecked ? "checkfalse" : ""}"></ion-icon>
+            <ion-icon name="radio-button-on-outline" id="check" class="${isChecked ? "checktrue" : ""}"></ion-icon>
+          </div>
+  
+          <span class="task-text ${isCompleted ? "task-textcomplete" : ""}" id="task-text_${taskNumber}">
+            <label><a href="${TodoList.Url}" target="_blank">${TodoList.Title}</a></label>
+          </span>
+  
+          <span class="task-time">
             <label>${TodoList.Timer}</label>
-            </span>
-
-            <span class="trash-cont" onclick="removeItem(${taskNumber - 1})">
-                <ion-icon name="trash-outline"></ion-icon>
-            </span>
-
+          </span>
+  
+          <span class="trash-cont" onclick="removeItem(${taskNumber - 1})">
+            <ion-icon name="trash-outline"></ion-icon>
+          </span>
         </li>
-        `;
+      `;
     });
-    // let taskCount = 0;
+  
     localStorage.setItem("taskNumber", taskNumber);
-   
-    
-}
+    localStorage.setItem("completedTasksCount", completedTasksCount);
+  }
+
 
 
 
@@ -208,7 +208,7 @@ ShowTodoList();
 
 
 
-function radiocheck(event) {
+function radiocheck(event, taskNumber) {
     let radioContainer = event.currentTarget;
     let radiofalse = radioContainer.querySelector("#uncheck");
     let radiotrue = radioContainer.querySelector("#check");
@@ -217,34 +217,21 @@ function radiocheck(event) {
     radiofalse.classList.toggle("checkfalse");
     radiotrue.classList.toggle("checktrue");
     taskText.classList.toggle("task-textcomplete");
-
-    // Get the index of the task within the task container
-//   let taskIndex = Array.from(taskContainer.children).indexOf(taskContainer.parentNode);
-
-  // Get the existing completed tasks from localStorage or an empty array
-//   let completedTasks = JSON.parse(localStorage.getItem("completedTasks")) || [];
-
-//   if (taskText.classList.contains("task-textcomplete")) {
-//     // Add the task index to the completed tasks array
-//     completedTasks.push(taskIndex);
-//   } else {
-//     // Remove the task index from the completed tasks array
-//     let index = completedTasks.indexOf(taskIndex);
-//     if (index !== -1) {
-//       completedTasks.splice(index, 1);
-//     }
-//   }
-
-  // Store the updated completed tasks array in localStorage
-  localStorage.setItem("competedTask",taskCompleted);
-//   localStorage.setItem("completedTasks", JSON.stringify(completedTasks));
-}
-
-
-
-function checkcom(event) {
+  
+    let isChecked = radiofalse.classList.contains("checkfalse");
+    localStorage.setItem(`radioChecked_${taskNumber}`, isChecked);
+  
+    let isCompleted = taskText.classList.contains("task-textcomplete");
+    localStorage.setItem(`taskCompleted_${taskNumber}`, isCompleted);
+  
+    let completedTasks = document.querySelectorAll(".task-textcomplete");
+    let completedTasksCount = completedTasks.length;
+    localStorage.setItem("completedTasksCount", completedTasksCount);
+  }
+  
+  function checkcom(event) {
     event.stopPropagation();
-}
+  }
   
   
   
@@ -253,9 +240,22 @@ function checkcom(event) {
 
 function removeItem(taskNumber) {
     let TodoStorage = JSON.parse(localStorage.getItem("MyTodo")) || [];
-    TodoStorage.splice(taskNumber, 1);
+    let DeletedStorage = JSON.parse(localStorage.getItem("DeletedTask")) || [];
+    let deletedTask = TodoStorage.splice(taskNumber, 1);
     localStorage.setItem("MyTodo", JSON.stringify(TodoStorage));
 
+   // Remove the task completed status from localStorage
+    localStorage.removeItem(`taskCompleted_${taskNumber + 1}`);
+  
+  // Remove the radio button status from localStorage
+    localStorage.removeItem(`radioChecked_${taskNumber + 1}`);
+  
+  // Update the DeletedStorage and save the count
+    DeletedStorage.push(deletedTask);
+    localStorage.setItem("DeletedTask", JSON.stringify(DeletedStorage));
+
+    let deletedTaskCount = DeletedStorage.length;
+    localStorage.setItem("DeletedTaskCount", deletedTaskCount);
 
     todoList = TodoStorage;
     ShowTodoList();

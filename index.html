@@ -152,10 +152,12 @@
 <!-- get the count of the task added that save from local storage -->
 <script>
     let taskCount = JSON.parse(localStorage.getItem("taskNumber")) || 0;
+    let taskCompleted  =JSON.parse(localStorage.getItem("completedTasksCount")) || 0;
+    let taskDeleted  = JSON.parse(localStorage.getItem("DeletedTaskCount")) || 0;
 
     document.getElementById("task-count").innerHTML = `${taskCount}`;
-    document.getElementById("task-completed").innerHTML = `${taskCount}`;
-    document.getElementById("task-deleted").innerHTML = `${taskCount}`;
+    document.getElementById("task-completed").innerHTML = `${taskCompleted}`;
+    document.getElementById("task-deleted").innerHTML = `${taskDeleted}`;
 
 </script>
 
