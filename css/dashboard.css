@@ -87,6 +87,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        padding-top: 50px;
     }
     .cards{
         width: 100%;

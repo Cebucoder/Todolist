@@ -474,7 +474,7 @@ body{
         transition: 0.4s;
     }
     .dashboard{
-        padding: 60px 20px !important;
+        padding: 20px !important;
     }
     .greetings{
         font-size: 9px;
