@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main-style.css">
     <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/bottom-nav.css">
+
     <link rel="icon" type="image/png" href="./images/logo.png" >
 
     <title>Taskido | Clock</title>
@@ -40,6 +42,37 @@
                 <ion-icon name="log-out-outline" title="Sign Out"></ion-icon>
             </div>
         </div>
+
+
+        <!-- this will apper in the smaller screen -->
+        <div class="bottom-navigation">
+            <div class="sidebar-icon " onclick="Dashboard()">
+                <ion-icon name="grid-outline" title="Dashboard"></ion-icon>
+            </div>
+
+            <div class="sidebar-icon " onclick="Calendar()">
+                <ion-icon name="today-outline" title="Calendar"></ion-icon>
+            </div>
+
+            <div class="sidebar-icon circ-add" onclick="Addtask()">
+                <ion-icon name="add-outline" title="Add task"></ion-icon>
+            </div>
+
+            <div class="sidebar-icon " onclick="NotiFication()">
+                <ion-icon name="notifications-outline" title="Notification"></ion-icon>
+            </div>
+    
+            <div class="sidebar-icon active" onclick="Clock()">
+                <ion-icon name="alarm-outline" title="Clock"></ion-icon>
+            </div>
+
+            <div class="sidebar-icon log log-small" onclick="LogOutForm()">
+                <ion-icon name="log-out-outline" title="Sign Out"></ion-icon>
+            </div>
+
+
+        </div>
+        <!-- this will apper in the smaller screen -->
 
 
         <!-- left content -->
