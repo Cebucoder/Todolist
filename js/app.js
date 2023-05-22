@@ -165,7 +165,7 @@ function ShowTodoList(){
         `
         <li >
             <div class="check-status">
-            <input type="checkbox" >
+            <input type="radio" name="radio">
             <span class="checkmark"></span>
             </div>
 
