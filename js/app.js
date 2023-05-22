@@ -16,12 +16,31 @@ function closeTaskModal(){
 }
 
 // redirectig to loginn page
-function LogOutForm(){
-    localStorage.removeItem("User");
-    localStorage.removeItem("MyTodo");
-    localStorage.removeItem("taskNumber");
+// function LogOutForm() {
+//     localStorage.removeItem("User");
+//     localStorage.removeItem("MyTodo");
+//     localStorage.removeItem("taskNumber");
+//     localStorage.removeItem("DeletedTask");
+//     localStorage.removeItem("DeletedTaskCount");
+  
+//     // Remove radio button and task completion status for each task
+//     let taskNumber = localStorage.getItem("taskNumber");
+//     for (let i = 1; i <= taskNumber; i++) {
+//       localStorage.removeItem(`radioChecked_${i}`);
+//       localStorage.removeItem(`taskCompleted_${i}`);
+//     }
+  
+//     localStorage.removeItem("completedTasksCount");
+  
+//     window.location.replace("login.html");
+//   }
+
+// shortest way
+function LogOutForm() {
+    localStorage.clear();
     window.location.replace("login.html");
-}
+  }
+  
 
 // redirectig to loginn page
 function Addtask(){
@@ -227,6 +246,11 @@ function radiocheck(event, taskNumber) {
     let completedTasks = document.querySelectorAll(".task-textcomplete");
     let completedTasksCount = completedTasks.length;
     localStorage.setItem("completedTasksCount", completedTasksCount);
+
+    // / Play audio
+	const audio = new Audio("ting1.mp3");
+	audio.play();
+
   }
   
   function checkcom(event) {
