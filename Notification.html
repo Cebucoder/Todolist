@@ -58,7 +58,7 @@
 
                 <div class="user-icon">
                     <img src="" alt="">
-                    <h2 id="user-f" style="color:#fff;"></h2>
+                    <h2 id="user-f"></h2>
                 </div>
 
             </div>
@@ -95,6 +95,12 @@
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script>
+    // get th efirst letter on the user name
+let userF = document.getElementById("user-f").innerHTML = `${userData[0]}`;
+
+</script>
 
 
 

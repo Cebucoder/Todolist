@@ -99,6 +99,10 @@ body{
     justify-content: center;
 }
 
+#user-f{
+    color: #003041;
+}
+
 /* greetings */
 .greetings{
     display: flex;

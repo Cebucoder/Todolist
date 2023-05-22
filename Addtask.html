@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main-style.css">
     <link rel="stylesheet" href="./css/addtask.css">
     <link rel="icon" type="image/png" href="./images/logo.png" >
 
@@ -57,6 +58,7 @@
 
                 <div class="user-icon">
                     <img src="" alt="">
+                    <h2 id="user-f"></h2>
                 </div>
 
             </div>
@@ -150,6 +152,13 @@
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 <script src="./js/app.js"></script>
+
+
+<script>
+    // get th efirst letter on the user name
+let userF = document.getElementById("user-f").innerHTML = `${userData[0]}`;
+
+</script>
 
 
 

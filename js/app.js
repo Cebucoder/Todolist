@@ -72,6 +72,9 @@ let userElement = document.getElementById("user").innerHTML = `${userData}`;
 userElement.innerHTML = userData;
 
 
+// get the first leter of the user to dispay on the user profile
+
+
 
 // check if user login or have a data on local storage
 
@@ -190,9 +193,10 @@ function ShowTodoList(){
     });
     // let taskCount = 0;
     localStorage.setItem("taskNumber", taskNumber);
-    // let taskCount = JSON.parse(localStorage.getItem("taskNumber")) || 0;
-    // document.getElementById("task-count").innerHTML = taskCount;
+    
 }
+
+
 
 
 
@@ -211,6 +215,8 @@ function removeItem(taskNumber) {
     ShowTodoList();
 
 }
+
+
 
 
 
