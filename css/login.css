@@ -220,4 +220,51 @@ swiper-container {
 
 
 
+@media(max-width:663px){
+    .loginform{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+@media(max-width:711px){
+    .maincontainer{
+        padding: 0px;
+    }
+    .loginform{
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        padding: 15px;
+        
+
+    }
+    .sign-guest{
+        width: 100%;
+        height: 100% !important;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;        
+    }
+    .action-btn{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .action-btn button{
+        width: 100%;
+    }
+    .swiper-hide{
+        display: none;
+    }
+    .login-from-details{
+        height: 100%;
+        padding: 0;
+    }
+
+}
+
+
+
 

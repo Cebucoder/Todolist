@@ -69,8 +69,8 @@ body{
 /* dashboard */
 .dashboard{
     width: 100%;
-    min-height: 100vh;
-    max-height: auto;
+    height: auto;
+    /* max-height: auto; */
     /* background: #003041; */
     background: #0030410d;
     padding: 30px 50px;
@@ -432,7 +432,9 @@ body{
     
     .todo-box{
         width: 100%;
+        height: auto;
         padding: 50px 0;
+        /* padding-bottom: 100px; */
     }
     .todo-inputbox{
         height: 50px;
@@ -445,5 +447,40 @@ body{
         width: 100%;
         height: auto;
     }
-    .tas
+    .task-container li{
+        border-radius: 5px !important;
+        height: 50px;
+    }
+    
+}
+
+@media(max-width:897px){
+    .todo-box{
+        width: 100%;
+        height: auto;
+        padding: 50px 0;
+        /* padding-bottom: 100px; */
+    }
+    .todo-inputbox{
+        height: 50px;
+        border-radius: 5px;
+    }
+    .popup-task-mod{
+        padding: 20px;
+    }
+    .task-modal{
+        width: 100%;
+        height: auto;
+    }
+
+    .header{
+        width: 100% !important;
+        height: 90px;
+        padding: 0 20px;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        background: #003041;
+        z-index: 999;
+    }
 }

@@ -16,6 +16,7 @@ body{
     height: auto;
     display: flex;
     padding-left: 80px;
+    position: relative;
 }
 
 /* side-navigation */
@@ -484,13 +485,17 @@ body{
     }
     .header{
         width: 100% !important;
-        position: relative !important;
+        position: absolute !important;
         top: 0 !important;
         left: 0 !important;
         background: #003041;
     }
-    .task-container li{
+    .task-container{
         height: 50px !important;
+        
+    }
+    .dashboard{
+        max-height: auto;
     }
 }
 
