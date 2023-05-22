@@ -160,20 +160,23 @@ let taskContainer = document.getElementById("task-container");
 function ShowTodoList(){
     taskContainer.innerHTML = "";
     let taskNumber = 0;
-    let taskDeleted = 0;
+    // let taskDeleted = 0;
+    let taskCompleted = 0;
     todoList.forEach(function(TodoList){
         taskNumber++;
-        taskDeleted++;
+        // taskDeleted++;
+        taskCompleted++;
+
         taskContainer.innerHTML +=
 
         `
         <li >
-            <div class="radiocheck" onclick="radiocheck(event)">
+            <div class="radiocheck" onclick="radiocheck(event),checkcom(event)">
                 <ion-icon name="radio-button-off-outline" id="uncheck"></ion-icon>
                 <ion-icon name="radio-button-on-outline" id="check"></ion-icon>
             </div>
 
-            <span class="task-text">
+            <span class="task-text" id="task-text">
             <!--<label><a href="${"https://"+TodoList.Url}" target="_blank">${TodoList.Title}</a></label>-->
             <label><a  href="${TodoList.Url}" target="_blank">${TodoList.Title}</a></label>
             </span>
@@ -192,6 +195,7 @@ function ShowTodoList(){
     });
     // let taskCount = 0;
     localStorage.setItem("taskNumber", taskNumber);
+   
     
 }
 
@@ -203,23 +207,45 @@ todoList = JSON.parse(localStorage.getItem("MyTodo")) || [];
 ShowTodoList();
 
 
-// let radiotrue = document.getElementById("check");
-// let radiofalse = document.getElementById("uncheck");
-// function radiocheck(){
-//     radiofalse.classList.toggle("checkfalse");
-//     radiotrue.classList.toggle("checktrue");
-// }
 
 function radiocheck(event) {
     let radioContainer = event.currentTarget;
     let radiofalse = radioContainer.querySelector("#uncheck");
     let radiotrue = radioContainer.querySelector("#check");
-    let taskComplete = document.querySelector(".task-text");
+    let taskText = radioContainer.parentNode.querySelector(".task-text");
   
     radiofalse.classList.toggle("checkfalse");
     radiotrue.classList.toggle("checktrue");
-    taskComplete.classList.toggle("task-textcomplete");
-  }
+    taskText.classList.toggle("task-textcomplete");
+
+    // Get the index of the task within the task container
+//   let taskIndex = Array.from(taskContainer.children).indexOf(taskContainer.parentNode);
+
+  // Get the existing completed tasks from localStorage or an empty array
+//   let completedTasks = JSON.parse(localStorage.getItem("completedTasks")) || [];
+
+//   if (taskText.classList.contains("task-textcomplete")) {
+//     // Add the task index to the completed tasks array
+//     completedTasks.push(taskIndex);
+//   } else {
+//     // Remove the task index from the completed tasks array
+//     let index = completedTasks.indexOf(taskIndex);
+//     if (index !== -1) {
+//       completedTasks.splice(index, 1);
+//     }
+//   }
+
+  // Store the updated completed tasks array in localStorage
+  localStorage.setItem("competedTask",taskCompleted);
+//   localStorage.setItem("completedTasks", JSON.stringify(completedTasks));
+}
+
+
+
+function checkcom(event) {
+    event.stopPropagation();
+}
+  
   
   
 
