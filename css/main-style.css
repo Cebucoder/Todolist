@@ -405,6 +405,40 @@ body{
     width: 100%;
 }
 
+
+/* radiocheck */
+.radiocheck{
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: pink; */
+    color: #003041;
+    cursor: pointer;
+}
+.radiocheck ion-icon{
+    font-size: 25px;
+}
+
+#check{
+    display: none;
+}
+.checktrue{
+    display: flex !important;
+}
+
+.checkfalse{
+    display: none;
+}
+
+.task-textcomplete{
+    text-decoration: line-through;
+}
+
+
+
 @keyframes rotate {
     from {
         transform: rotate(0deg);

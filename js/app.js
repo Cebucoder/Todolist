@@ -92,7 +92,6 @@ if (userData == null){
         window.location.replace("login.html");
     },3000)
 
-
     
 }
 
@@ -132,7 +131,7 @@ function addTodo(){
     let taskUrl = document.getElementById('task-url').value;
     let taskTimer = document.getElementById('task-timer').value;
 
-
+    
     if ((taskTitle == "") && (taskUrl == "") && (taskTimer == "")){
         // alert("Field is Empty!");
         taskTitle.classList.add("show-taskerr");
@@ -141,9 +140,9 @@ function addTodo(){
     }else{
     
     closePopupModal.classList.remove("show-task-modal");
-    taskTitle.value = '';
-    taskUrl.value = '';
-    taskTimer.value = '';   
+    // taskTitle.value = '';
+    // taskUrl.value = '';
+    // taskTimer.value = '';   
 
     let TodoStorage = JSON.parse(localStorage.getItem("MyTodo")) || [];
     TodoStorage.push({Title: taskTitle, Url: taskUrl, Timer: taskTimer });
@@ -169,14 +168,14 @@ function ShowTodoList(){
 
         `
         <li >
-            <div class="check-status">
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
+            <div class="radiocheck" onclick="radiocheck(event)">
+                <ion-icon name="radio-button-off-outline" id="uncheck"></ion-icon>
+                <ion-icon name="radio-button-on-outline" id="check"></ion-icon>
             </div>
 
             <span class="task-text">
             <!--<label><a href="${"https://"+TodoList.Url}" target="_blank">${TodoList.Title}</a></label>-->
-            <label><a href="${TodoList.Url}" target="_blank">${TodoList.Title}</a></label>
+            <label><a  href="${TodoList.Url}" target="_blank">${TodoList.Title}</a></label>
             </span>
 
             <span class="task-time">
@@ -202,6 +201,27 @@ function ShowTodoList(){
 
 todoList = JSON.parse(localStorage.getItem("MyTodo")) || [];
 ShowTodoList();
+
+
+// let radiotrue = document.getElementById("check");
+// let radiofalse = document.getElementById("uncheck");
+// function radiocheck(){
+//     radiofalse.classList.toggle("checkfalse");
+//     radiotrue.classList.toggle("checktrue");
+// }
+
+function radiocheck(event) {
+    let radioContainer = event.currentTarget;
+    let radiofalse = radioContainer.querySelector("#uncheck");
+    let radiotrue = radioContainer.querySelector("#check");
+    let taskComplete = document.querySelector(".task-text");
+  
+    radiofalse.classList.toggle("checkfalse");
+    radiotrue.classList.toggle("checktrue");
+    taskComplete.classList.toggle("task-textcomplete");
+  }
+  
+  
 
 
 
