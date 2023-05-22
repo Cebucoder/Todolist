@@ -33,6 +33,20 @@ function Dashboard(){
 
 }
 
+function Calendar(){
+    window.location.replace("Calendar.html");
+}
+
+function NotiFication(){
+    window.location.replace("Notification.html");
+}
+
+function Clock(){
+    window.location.replace("Clock.html");
+}
+
+
+
 function Signin(){
     let username = document.getElementById("user-name").value;
     let err = document.getElementById("err-alert");
