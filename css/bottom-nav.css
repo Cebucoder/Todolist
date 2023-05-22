@@ -3,7 +3,7 @@
     z-index: 999;
     background: #fff;
     width: 100%;
-    height: 65px;
+    height: 60px;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -14,6 +14,7 @@
     transition: 0.4s;
     opacity: 0;
     visibility: hidden;
+   
 }
 .bottom-navigation .sidebar-icon{
     width: 45px;
@@ -28,16 +29,19 @@
     box-shadow: 0 0 10px -2px #f7f7f7 !important;
 }
 
+
+
 .bottom-navigation .circ-add{
-    width: 55px;
-    height: 55px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
-    border: 1px solid #003041;
+    border: 6px solid #003041;
     background: #fff;
     color: #003041;
-    font-size: 30px;
-    top: -20px;
-    box-shadow: 0 0 10px -2px  #003041;
+    font-size: 40px;
+    font-weight: bolder;
+    top: -40%;
+    position: relative;
 }
 
 
