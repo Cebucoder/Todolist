@@ -158,8 +158,10 @@ let taskContainer = document.getElementById("task-container");
 function ShowTodoList(){
     taskContainer.innerHTML = "";
     let taskNumber = 0;
+    let taskDeleted = 0;
     todoList.forEach(function(TodoList){
         taskNumber++;
+        taskDeleted++;
         taskContainer.innerHTML +=
 
         `
@@ -192,6 +194,8 @@ function ShowTodoList(){
     // document.getElementById("task-count").innerHTML = taskCount;
 }
 
+
+
 todoList = JSON.parse(localStorage.getItem("MyTodo")) || [];
 ShowTodoList();
 
@@ -201,6 +205,8 @@ function removeItem(taskNumber) {
     let TodoStorage = JSON.parse(localStorage.getItem("MyTodo")) || [];
     TodoStorage.splice(taskNumber, 1);
     localStorage.setItem("MyTodo", JSON.stringify(TodoStorage));
+
+
     todoList = TodoStorage;
     ShowTodoList();
 
