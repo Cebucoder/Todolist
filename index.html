@@ -84,7 +84,7 @@
                             <ion-icon name="checkmark-done-outline"></ion-icon>
                         </div>
                         <div class="todo-count">
-                            <h1 id="task-complete">0</h1>
+                            <h1 id="task-completed">0</h1>
                         </div>
                         <span>
                             <small>Task Completed</small>
@@ -96,7 +96,7 @@
                             <ion-icon name="trash-outline"></ion-icon>
                         </div>
                         <div class="todo-count">
-                            <h1>0</h1>
+                            <h1 id="task-deleted">0</h1>
                         </div>
                         <span>
                             <small>Trash</small>
@@ -128,7 +128,25 @@
 
 <script src="./js/app.js"></script>
 
+<!-- get the task completed that save to loacl storage -->
+<script>
+    // let taskComplete = JSON.parse(localStorage.getItem("taskNumberCompleted"));
+    // document.getElementById("task-complete").innerHTML = `${taskComplete}`;
+</script>
 
+<!-- get thge delted task that sav eto loacal stoarge -->
+<script>
+    // let taskDeleted = JSON.parse(localStorage.getItem("taskNumberDelted"));
+    // document.getElementById("task-deleted").innerHTML = `${taskDeleted}`;
+</script>
+
+
+
+<!-- get the count of the task added that save from local storage -->
+<script>
+    let taskCount = JSON.parse(localStorage.getItem("taskNumber"));
+    document.getElementById("task-count").innerHTML = `${taskCount}`;
+</script>
 
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

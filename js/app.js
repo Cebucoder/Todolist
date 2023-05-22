@@ -188,8 +188,8 @@ function ShowTodoList(){
     });
     // let taskCount = 0;
     localStorage.setItem("taskNumber", taskNumber);
-    let taskCount = JSON.parse(localStorage.getItem("taskNumber")) || 0;
-    document.getElementById("task-count").innerHTML = taskCount;
+    // let taskCount = JSON.parse(localStorage.getItem("taskNumber")) || 0;
+    // document.getElementById("task-count").innerHTML = taskCount;
 }
 
 todoList = JSON.parse(localStorage.getItem("MyTodo")) || [];
