@@ -360,3 +360,84 @@ body{
 .add-task{
     margin-right: 15px;
 }
+
+
+
+
+
+/* warning page */
+.warning-page{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    transition: 0.2s;
+    visibility: hidden;
+}
+
+/* .warning-card */
+.warning-card{
+    width: 600px;
+    height: 300px;
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px 3px #003041;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #003041;
+    transform: 0.2s;
+    transform: scale(0.1);
+    
+
+}
+
+.show-warning-page{
+    opacity: 1;
+    transition: 0.2s;
+    visibility: visible;
+}
+
+/* togglw warning */
+.show-warning-modal{
+    transform: scale(1);
+}
+
+.warning-card h1{
+    padding: 10px 0;
+    font-size: 40px;
+}
+
+.loading-anim{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 20px;
+    animation: rotate 1s infinite linear;
+}
+.loading-anim img{
+    width: 100%;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
