@@ -159,10 +159,10 @@ function addTodo(){
     }else{
     
     closePopupModal.classList.remove("show-task-modal");
-    // taskTitle.value = '';
-    // taskUrl.value = '';
-    // taskTimer.value = '';   
 
+    document.getElementById('task-title').value = '';
+    document.getElementById('task-url').value = '';
+    document.getElementById('task-timer').value = '';
     let TodoStorage = JSON.parse(localStorage.getItem("MyTodo")) || [];
     TodoStorage.push({Title: taskTitle, Url: taskUrl, Timer: taskTimer });
     localStorage.setItem("MyTodo", JSON.stringify(TodoStorage));

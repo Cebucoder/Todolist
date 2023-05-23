@@ -13,10 +13,12 @@ body{
 /* main-container */
 .main-container{
     width: 100%;
-    height: auto;
+    height: 100vh !important;
+    /* max-height: 100% !important; */
     display: flex;
     padding-left: 80px;
     position: relative;
+    background: #003041;
 }
 
 /* side-navigation */
@@ -70,8 +72,10 @@ body{
 /* dashboard */
 .dashboard{
     width: 100%;
-    min-height: 100vh;
-    max-height: auto;
+    height: 100%;
+    /* min-height: 100vh; */
+    /* max-height: auto; */
+    height: auto;
     background: #003041;
     /* background: #0030410d; */
     padding: 30px 50px;
@@ -237,10 +241,10 @@ body{
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%); */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -475,6 +479,8 @@ body{
     }
     .dashboard{
         padding: 20px !important;
+        margin-bottom: 90px;
+        margin-top: 60px;
     }
     .greetings{
         font-size: 9px;
@@ -498,7 +504,7 @@ body{
         
     }
     .dashboard{
-        max-height: auto;
+        /* max-height: auto; */
     }
     .warning-page{
         padding: 15px;
