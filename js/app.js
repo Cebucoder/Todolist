@@ -217,8 +217,32 @@ function ShowTodoList() {
           </span>
         </li>
       `;
+
+      const tingSound = new Audio('./music/ting1.mp3');  
+
+    // Get the current time
+    const currentDate = new Date();
+    const currentHours = currentDate.getHours();
+    const currentMinutes = currentDate.getMinutes();
+    // Format the current time as "HH:MM" for comparison
+    const currentTime = `${currentHours}:${currentMinutes}`;
+    // Check for a match between currentTime and TodoList.Timer
+
+    // let alarmModal = document.getElementById("")
+
+    if (currentTime === TodoList.Timer) {
+	    tingSound.play();
+
+      alert("Match found for time: " + TodoList.Timer);
+      console.log("Match found for time: " + TodoList.Timer);
+      // / play audio when user click task completed
+
+    }
+          
+
     });
-  
+
+
     localStorage.setItem("taskNumber", taskNumber);
     localStorage.setItem("completedTasksCount", completedTasksCount);
   }

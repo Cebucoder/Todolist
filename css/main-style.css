@@ -55,7 +55,7 @@ body{
 }
 
 .active{
-    background: #003041;
+    background: #003041; 
     color: #fff;
 }
 
@@ -504,9 +504,7 @@ body{
         height: 50px !important;
         
     }
-    .dashboard{
-        /* max-height: auto; */
-    }
+ 
     .warning-page{
         padding: 15px;
         z-index: 999;
