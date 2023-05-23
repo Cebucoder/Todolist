@@ -46,8 +46,31 @@
 
 
 .bottom-navigation .log-small{
-    display: none;
+    /* display: none; */
+    width: 90px;
+    height: 50px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background: #fff;
+    position: inherit;
+    top: 100px;
+    right: -100%;
+    box-shadow: 0 0 10px 2px  #003041;
+    border: 1px solid #003041;
+    border-style: none;
+    transition: 0.3s;
+    opacity: 0;
+
 }
+
+.show-log{
+    opacity: 1 !important;
+    right: 0 !important;
+}
+
+ 
 
 
 @media(max-width:663px){

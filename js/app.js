@@ -40,6 +40,12 @@ function LogOutForm() {
     localStorage.clear();
     window.location.replace("login.html");
   }
+
+  function showUser(){
+    let userico = document.getElementById("user-log");
+    userico.classList.toggle("show-log");
+    console.log("userclick");
+  }  
   
 
 // redirectig to loginn page
@@ -285,6 +291,9 @@ function removeItem(taskNumber) {
     ShowTodoList();
 
 }
+
+
+
 
 
 

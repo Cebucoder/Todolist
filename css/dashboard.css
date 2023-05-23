@@ -88,6 +88,7 @@
         justify-content: center;
         flex-direction: column;
         padding-top: 50px;
+        margin-top: -60px;
     }
     .cards{
         width: 100%;
