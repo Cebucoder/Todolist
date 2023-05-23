@@ -66,7 +66,7 @@
                 <ion-icon name="alarm-outline" title="Clock"></ion-icon>
             </div>
 
-            <div class="sidebar-icon log log-small" onclick="LogOutForm()">
+            <div id="user-log" class="sidebar-icon log log-small"  onclick="LogOutForm()">
                 <ion-icon name="log-out-outline" title="Sign Out"></ion-icon>
             </div>
 
@@ -89,7 +89,7 @@
                     </span>
                 </div>
 
-                <div class="user-icon">
+                <div class="user-icon" onclick="showUser()">
                     <img src="" alt="">
                     <h2 id="user-f"></h2>
                 </div>
